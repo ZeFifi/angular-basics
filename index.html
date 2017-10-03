@@ -8,11 +8,25 @@
 </head>
 <body ng-app="todoListApp">
 
-    <hello-world></hello-world>
+    <!-- <hello-world></hello-world> Custom directive made in scripts/helloworld.js -->
+
+	<h1>My TODOs</h1>
+
+	<div class="list">
+		<input type="checkbox" name="" value="">
+		<label class="editing-label">A sample todo</label>
+		<input class="editing-label" type="text"/>
+	</div>
+
+	<div class="actions">
+		<a href="">edit</a>
+		<a href="">save</a>
+		<a href="" class="delete">delete</a>
+	</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
     <script src="./scripts/app.js"></script>
-    <script src="./scripts/hello-world.js"></script>
+    <!-- <script src="./scripts/hello-world.js"></script> -->
 </body>
 </body>
 </html>
