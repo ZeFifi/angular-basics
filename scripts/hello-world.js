@@ -2,6 +2,6 @@
 
 angular.module("todoListApp").directive("helloWorld", function() {
     return {
-        template: "Hello World"
+        template: " Hello World"
     }
 })
