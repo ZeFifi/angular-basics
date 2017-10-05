@@ -11,16 +11,17 @@
     <!-- <hello-world></hello-world> Custom directive made in scripts/helloworld.js -->
 
 	<h1>My TODOs</h1>
-
 	<div class="list" ng-controller="mainCtrl">
-		<input type="checkbox" name="" value="">
-		<label class="editing-label">{{todo.name}}</label>
-		<input ng-model="todo.name" class="editing-label" type="text"/>
-		
-		<div class="actions" ng-controller="coolCtrl">
-			<a href="">edit</a>
-			<a href="" ng-click="helloworld()">save</a>
-			<a href="" class="delete" ng-click="coolMsg()">delete</a>
+		<div ng-repeat="todo in todos">
+			<input type="checkbox" name="" value="">
+			<label class="editing-label" ng-hide="editing">{{todo.name}}</label>
+			<input ng-model="todo.name" ng-blur="editing = false" ng-show="editing" class="editing-label" type="text"/>
+			
+			<div class="actions">
+				<a href="" ng-click="editing = !editing">edit</a>
+				<a href="" ng-click="helloworld()">save</a>
+				<a href="" class="delete" ng-click="coolMsg()">delete</a>
+			</div>
 		</div>
 	</div>
 
